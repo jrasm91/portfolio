@@ -1,0 +1,19 @@
+{
+  "name": "jrasm-home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html -p 4200",
+    "build": "parcel build index.html",
+    "deploy": "npm run build && npm run deploy:hosting",
+    "deploy:hosting": "firebase deploy --only hosting"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^3.10.1",
+    "parcel-bundler": "^1.12.3"
+  }
+}
