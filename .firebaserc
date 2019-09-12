@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "jrasm-com"
+  },
+  "targets": {
+    "jrasm-com": {
+      "hosting": {
+        "jrasm-com": [
+          "jrasm-com"
+        ]
+      }
+    }
   }
 }
