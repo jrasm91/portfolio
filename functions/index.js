@@ -1,7 +1,5 @@
 const functions = require('firebase-functions');
-const dotenv = require('dotenv');
-
-dotenv.config();
+require('dotenv').config();
 
 const { slackIntegration } = require('./slackIntegration');
 
