@@ -17,9 +17,9 @@ const yesterday = () => {
 }
 
 const makeMovedMessage = member => {
-  const genderEmoji = member.genderLabelShort === 'F' ? ':woman:' : ':man:';
+  const genderEmoji = member.genderLabelShort ? (member.genderLabelShort === 'F' ? ':woman:' : ':man:') : '';
   const addressEmoji = member.addressUnknown ? ':exclamation:' : ''
-  return `${genderEmoji} ${member.name} (${member.age || member.nextUnitName}) ${addressEmoji}`
+  return `${genderEmoji} ${member.name} (${member.age || member.nextUnitName}) ${addressEmoji}`.trim();
 }
 
 const checkForMoveIns = async (authCookie) => {
