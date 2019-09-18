@@ -59,7 +59,7 @@ const slackIntegration = async () => {
       console.error(`Error checking for move-ins: ${error.message}`);
     });
 
-    await checkForMoveOuts(authCookie, MOVE_OUT_URL).catch(error => {
+    await checkForMoveOuts(authCookie).catch(error => {
       console.error(`Error checking for move-outs: ${error.message}`);
     });
 
