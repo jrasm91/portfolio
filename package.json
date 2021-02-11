@@ -16,7 +16,10 @@
   "license": "ISC",
   "devDependencies": {
     "less": "^3.10.1",
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^2.2.1"
   },
-  "dependencies": {}
+  "prettier": {
+    "printWidth": 140
+  }
 }

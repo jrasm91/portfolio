@@ -1,81 +1,83 @@
+@breakpoint: 650px;
+@color1: #1d2d50;
+@color2: #133b5c;
+@color3: #1e5f74;
+@color4: #fcdab7;
+
 html,
 body {
-	margin: 0;
-	padding: 0;
-	font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-}
-
-#wrapper {
-	display: flex;
-	flex-direction: column;
-	padding: 1em;
-	width: 100%;
-	max-width: 600px;
-	margin: auto;
-	p {
-		line-height: 2em;
-	}
-}
-
-#header {
-	text-align: center;
-	.me {
-		margin-top: 1em;
-	}
-	img {
-		border-radius: 50%;
-		height: auto;
-		width: 150px;
-		@media (max-width: 600px) {
-			width: 125px;
-		}
-	}
+  margin: 0;
+  padding: 0;
+  font: 20px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: @color1;
+  color: @color4;
 }
 
 h1 {
-	font-weight: 600;
-	font-size: 3em;
-	line-height: 1em;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.25em;
+  line-height: 1em;
+}
+
+div.divider {
+  border-bottom: 1px solid @color4;
 }
 
 a {
-	text-decoration: none;
-	border: none;
+  text-decoration: none;
+  border: none;
 
-	&:not(.nolink) {
-		background-color: black;
-		color: white;
-		padding: 0.125em 0.25em;
-		margin: 0.125em 0.25em;
-		border-radius: 3px;
-		&:hover {
-			background-color: black;
-			padding: 0.25em 0.5em;
-			margin: 0;
-		}
-	}
+  &:not(.nolink) {
+    background-color: #1e5f74;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.2em 0.4em;
+    margin: 0.25em;
+    margin-right: 0;
+    border-radius: 3px;
+    &:hover {
+      background-color: @color2;
+      padding: 0.45em 0.65em;
+      margin: 0;
+    }
+  }
 }
 
-#social {
-	margin-top: 2em;
-	> div {
-		margin-bottom: 2em;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		span {
-			padding-right: 1em;
-		}
-	}
-	line-height: 1em;
-	img {
-		height: 4em;
-		border-radius: 10px;
-	}
+#header {
+  text-align: center;
+  .me {
+    margin-top: 1em;
+  }
+  img {
+    border-radius: 50%;
+    height: auto;
+    width: 150px;
+    @media (max-width: @breakpoint) {
+      max-width: 200px;
+      width: 85vw;
+    }
+    @media (max-width: 450px) {
+      border-radius: 25%;
+    }
+  }
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 100%;
+  margin: auto;
+  max-width: @breakpoint;
+  p {
+    line-height: 1.5em;
+  }
 }
 
 footer {
-	margin-bottom: 5em;
+  margin-bottom: 5em;
 }
