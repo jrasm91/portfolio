@@ -9,7 +9,6 @@
     "clean": "npx rimraf dist",
     "build": "parcel build index.html",
     "deploy:hosting": "firebase deploy --only hosting:jrasm-com",
-    "deploy:functions": "firebase deploy --only functions",
     "deploy": "npm run clean && npm run build && npm run deploy:hosting"
   },
   "author": "",
